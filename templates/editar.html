@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        <form action="/editar_contacto/{{ contact.0 }}" method="post">
+            <div class="form-group">
+                <input type="text" name="fullname" class="form-control" value="{{ contact.1 }}">
+            </div>
+            <div class="form-group">
+                <input type="text" name="phone" class="form-control" value = "{{ contact.2 }}">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" value = "{{ contact.3 }}">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+            </div>           
+        </form> 
+    </div>
+</div>
+
+{% endblock %}
